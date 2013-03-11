@@ -50,6 +50,9 @@ Sugar Event Calendar Lite has been translated into:
 4. Display the calendar on any page with [sc_events_calendar]
 5. View the archive of events at _yoursite.com/events_
 
+== Other Notes = 
+Calendar menu icon by [Yusuke Kamiyamane](http://p.yusukekamiyamane.com/).
+
 == Screenshots ==
 
 1. Event calendar
