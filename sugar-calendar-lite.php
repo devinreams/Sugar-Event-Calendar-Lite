@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: Sugar Events Calendar Lite for WordPress
+Plugin Name: Sugar Events Calendar Lite Plus
 Plugin URI: http://pippinsplugins.com/sugar-calendar-lite
-Description: A sweet, simple Event Calendar for WordPress
-Author: Pippin Williamson
+Description: A sweet, simple Event Calendar for WordPress (with modifications)
+Author: Pippin Williamson (modified by Devin Reams)
 Author URI: http://pippinsplugins.com
-Version: 1.0.2
+Version: 2.0
 Text Domain: pippin_sc
 Domain Path: /languages/
 */

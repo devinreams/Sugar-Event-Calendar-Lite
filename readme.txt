@@ -1,13 +1,13 @@
-=== Sugar Events Calendar Lite ===
-Author: Pippin Williamson
-Contributors: mordauk
+=== Sugar Events Calendar Lite Plus ===
+Author: Pippin Williamson (modified by Devin Reams)
+Contributors: mordauk, devinreams
 Author URI: http://pippinsplugins.com
 Plugin URI: http://pippinsplugins.com/sugar-calendar-lite
 Donate link: http://pippinsplugins.com/support-the-site
 Tags: event calendar, events, simple, events calendar, calendar, Pippin Williamson, Pippin's Plugins
 Requires at least: 3.2
-Tested up to: 3.5
-Stable tag: 1.0.2
+Tested up to: 3.8
+Stable tag: 2.0
 
 A sweet, simple event calendar plugin. Create your events and show them on a simple calendar. That's it.
 
