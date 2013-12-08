@@ -36,6 +36,7 @@ function sc_add_event_details($event_id) {
 				<span class="sc_event_time_sep">&nbsp;<?php _e('to', 'pippin_sc'); ?>&nbsp;</span>
 				<span class="sc_event_end_time"><?php echo sc_get_event_end_time($event_id); ?></span>
 			</div><!--end .sc_event_time-->
+			<div class="sc_event_location"><?php echo __('Location:', 'pippin_sc') . ' ' . sc_get_event_location($event_id); ?></div>
 		</div><!--end .sc_event_details_inner-->
 	</div><!--end .sc_event_details-->
 	

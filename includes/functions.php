@@ -301,3 +301,17 @@ function sc_get_event_end_time( $event_id ) {
 
 	return apply_filters( 'sc_event_end_time', $time, $hour, $minute );
 }
+
+/**
+ * Retrieves the calendar location for an event
+ *
+ * @access      public
+ * @since       2.0
+ * @param		$event_id int The ID number of the event
+ * @return      string
+*/
+function sc_get_event_location( $event_id ) {
+	$location = get_post_meta( $event_id, 'sc_event_location', true );
+
+	return $location;
+}

@@ -87,6 +87,17 @@ function sc_render_event_config_meta_box() {
 			echo '</td>';
 			
 		echo '</tr>';
+
+		echo '<tr class="sc_meta_box_row">';
+	
+			echo '<td class="sc_meta_box_td" colspan="2"><label for="sc_event_location">' . __('Event Location', 'pippin_sc') . '</label></td>';
+			
+			echo '<td class="sc_meta_box_td" colspan="4">';
+				$location = isset( $meta['sc_event_location'][0] ) ? $meta['sc_event_location'][0] : '';
+				echo '<input type="text" name="sc_event_location" value="' . esc_attr( $location ) . '"/>';
+			echo '</td>';
+			
+		echo '</tr>';
 		
 		do_action('sc_event_meta_box_after');
 	
@@ -141,7 +152,9 @@ function sc_meta_box_save($post_id) {
 	$end_minutes	= sanitize_text_field( $_POST['sc_event_end_time_minute']);
 	$end_am_pm 		= sanitize_text_field( $_POST['sc_event_end_time_am_pm']);
 	$recurring		= isset($_POST['sc_event_recurring']) ? $_POST['sc_event_recurring'] : '';
-	
+	$location 		= sanitize_text_field( $_POST['sc_event_location'] );
+
+
 	if( $am_pm == 'pm' && $hour < 12 )
 		$hour += 12;
 	elseif( $am_pm == 'am' && $hour >= 12 )
@@ -166,6 +179,7 @@ function sc_meta_box_save($post_id) {
 	update_post_meta($post_id, 'sc_event_end_time_minute', $end_minutes);
 	update_post_meta($post_id, 'sc_event_end_time_am_pm', $end_am_pm);
 	update_post_meta($post_id, 'sc_event_recurring', $recurring);
-		
+	update_post_meta($post_id, 'sc_event_location', $location);
+
 }
 add_action('save_post', 'sc_meta_box_save');
