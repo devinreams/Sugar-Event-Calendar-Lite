@@ -55,7 +55,8 @@ function sc_event_admin_menu_icon() {
 }
 #adminmenu #menu-posts-sc_event:hover div.wp-menu-image,
 #adminmenu #menu-posts-sc_event.wp-has-current-submenu div.wp-menu-image {
-	background-position: 6px 6px;
+	background-position: 6px 7px;
+}
 </style>
 <?php
 }

@@ -85,10 +85,10 @@ add_filter( 'manage_edit-sc_event_sortable_columns', 'sc_sortable_columns' );
 */
 
 function sc_sort_events( $vars ) {
-	// check if we're viewing the "movie" post type
+	// check if we're viewing the "events" post type
 	if ( isset( $vars['post_type'] ) && 'sc_event' == $vars['post_type'] ) {
 
-		// check if 'orderby' is set to "sales"
+		// check if 'orderby' is set to "date"
 		if ( isset( $vars['orderby'] ) && $vars['orderby'] == 'event_date' ) {
 			$vars['meta_key'] = 'sc_event_date_time';
 			$vars['orderby'] = 'meta_value_num';
