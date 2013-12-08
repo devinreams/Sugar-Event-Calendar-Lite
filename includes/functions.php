@@ -315,3 +315,17 @@ function sc_get_event_location( $event_id ) {
 
 	return $location;
 }
+
+/**
+ * Retrieves the URL for an event
+ *
+ * @access      public
+ * @since       2.0
+ * @param		$event_id int The ID number of the event
+ * @return      string
+*/
+function sc_get_event_url( $event_id ) {
+	$url = get_post_meta( $event_id, 'sc_event_url', true );
+
+	return $url;
+}

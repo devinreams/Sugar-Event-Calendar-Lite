@@ -37,6 +37,7 @@ function sc_add_event_details($event_id) {
 				<span class="sc_event_end_time"><?php echo sc_get_event_end_time($event_id); ?></span>
 			</div><!--end .sc_event_time-->
 			<div class="sc_event_location"><?php echo __('Location:', 'pippin_sc') . ' ' . sc_get_event_location($event_id); ?></div>
+			<div class="sc_event_url"><?php echo __('Website:', 'pippin_sc') . ' ' . make_clickable(sc_get_event_url($event_id)); ?></div>
 		</div><!--end .sc_event_details_inner-->
 	</div><!--end .sc_event_details-->
 	

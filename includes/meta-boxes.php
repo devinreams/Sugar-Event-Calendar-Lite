@@ -99,6 +99,17 @@ function sc_render_event_config_meta_box() {
 			
 		echo '</tr>';
 		
+		echo '<tr class="sc_meta_box_row">';
+	
+			echo '<td class="sc_meta_box_td" colspan="2"><label for="sc_event_url">' . __('Event URL', 'pippin_sc') . '</label></td>';
+			
+			echo '<td class="sc_meta_box_td" colspan="4">';
+				$url = isset( $meta['sc_event_url'][0] ) ? $meta['sc_event_url'][0] : '';
+				echo '<input type="url" name="sc_event_url" value="' . esc_url( $url ) . '"/>';
+			echo '</td>';
+			
+		echo '</tr>';
+
 		do_action('sc_event_meta_box_after');
 	
 	echo '</table>';
@@ -152,6 +163,7 @@ function sc_meta_box_save($post_id) {
 	$end_minutes	= sanitize_text_field( $_POST['sc_event_end_time_minute']);
 	$end_am_pm 		= sanitize_text_field( $_POST['sc_event_end_time_am_pm']);
 	$location 		= sanitize_text_field( $_POST['sc_event_location'] );
+	$url 			= sanitize_text_field( $_POST['sc_event_url'] );
 
 
 	if( $am_pm == 'pm' && $hour < 12 )
@@ -178,6 +190,7 @@ function sc_meta_box_save($post_id) {
 	update_post_meta($post_id, 'sc_event_end_time_minute', $end_minutes);
 	update_post_meta($post_id, 'sc_event_end_time_am_pm', $end_am_pm);
 	update_post_meta($post_id, 'sc_event_location', $location);
+	update_post_meta($post_id, 'sc_event_url', $url);
 
 }
 add_action('save_post', 'sc_meta_box_save');
