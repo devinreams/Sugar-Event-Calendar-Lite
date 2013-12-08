@@ -77,6 +77,10 @@ I have built a [free add-on](http://wordpress.org/extend/plugins/sugar-event-cal
 
 == Changelog ==
 
+= 1.0.3 =
+
+* Fixed a bug with Week Start Day being set to Monday
+
 = 1.0.2 =
 
 * Fixed a bug with the Year/Month drop down
