@@ -151,7 +151,6 @@ function sc_meta_box_save($post_id) {
 	$end_hour 		= sanitize_text_field( $_POST['sc_event_end_time_hour']);
 	$end_minutes	= sanitize_text_field( $_POST['sc_event_end_time_minute']);
 	$end_am_pm 		= sanitize_text_field( $_POST['sc_event_end_time_am_pm']);
-	$recurring		= isset($_POST['sc_event_recurring']) ? $_POST['sc_event_recurring'] : '';
 	$location 		= sanitize_text_field( $_POST['sc_event_location'] );
 
 
@@ -178,7 +177,6 @@ function sc_meta_box_save($post_id) {
 	update_post_meta($post_id, 'sc_event_end_time_hour', $end_hour);
 	update_post_meta($post_id, 'sc_event_end_time_minute', $end_minutes);
 	update_post_meta($post_id, 'sc_event_end_time_am_pm', $end_am_pm);
-	update_post_meta($post_id, 'sc_event_recurring', $recurring);
 	update_post_meta($post_id, 'sc_event_location', $location);
 
 }
